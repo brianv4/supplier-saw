@@ -34,6 +34,8 @@ class Alternatif{
 		
 		return $stmt;
 	}
+
+	
 	
 	// used when filling up the update product form
 	function readOne(){

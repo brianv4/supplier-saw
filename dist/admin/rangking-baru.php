@@ -16,9 +16,11 @@ if($_POST){
 	$eks->nn = $_POST['nn'];
 	
 	if($eks->insert()){
-    echo "<script>location.href='rangking.php'</script>";
+		echo "<script>location.href='rangking.php'</script>";
 
-	}else{
+}
+	
+	else{
 ?>
 <div class="alert alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

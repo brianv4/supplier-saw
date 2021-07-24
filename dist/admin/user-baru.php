@@ -41,7 +41,14 @@ if($_POST){
 }
 ?>
 
-<div class="container mt-5">
+<body class="sb-nav-fixed">
+          <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Data Kriteria</li>
+                        </ol>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-6">
 		  <div class="well">
@@ -75,6 +82,8 @@ if($_POST){
            
         </div>
         </div>
-        <?php
-include_once '../include/footer.php';
-?>
+        </main>
+<?php include "../include/footer.php"; ?>
+</div>
+</div>
+</div>

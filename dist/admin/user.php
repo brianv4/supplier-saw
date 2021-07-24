@@ -4,7 +4,15 @@ include_once '../controller/user.inc.php';
 $pro = new User($db);
 $stmt = $pro->readAll();
 ?>
-<div class="container mt-5">
+<body class="sb-nav-fixed">
+          <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Data Kriteria</li>
+                        </ol>
+
     <div class="row">
         <div class="col-md-6 text-left">
             <h4>Data Pengguna</h4>
@@ -20,7 +28,7 @@ $stmt = $pro->readAll();
                 <th width="30px">ID</th>
                 <th>Nama Lengkap</th>
                 <th>Username</th>
-                <th width="100px">Action</th>
+                <th colspan="2">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -32,15 +40,24 @@ $stmt = $pro->readAll();
     	    <td><?php echo $row['nama_lengkap'] ?></td>
     	    <td><?php echo $row['username'] ?></td>
             <td class="text-center">
-    		  <a href="user-ubah.php?id=<?php echo $row['id_pengguna'] ?>" class="btn btn-warning"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-    		  <a href="user-hapus.php?id=<?php echo $row['id_pengguna'] ?>" onclick="return confirm('Yakin ingin menghapus data')" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-    	    </td>
+					<a href="user-ubah.php?id=<?php echo $row['id_pengguna'] ?>" class="btn btn-info"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                </td>
+					<td class="text-center">
+                    <a href="user-hapus.php?id=<?php echo $row['id_pengguna'] ?>" onclick="return confirm('Yakin ingin menghapus data?')" class="btn btn-danger"><i class="fas fa-trash" aria-hidden="true"></i></a>
+			    </td>
+            
             </tr>
     <?php
     }
     ?>
         </tbody>
     </table>
-    <?php include "../include/footer.php"; ?>
+    
 </div>
+</main>
+<?php include "../include/footer.php"; ?>
+</div>
+</div>
+</div>
+
 

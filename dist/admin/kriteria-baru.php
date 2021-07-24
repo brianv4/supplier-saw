@@ -65,6 +65,7 @@ if($_POST){
 				  <button type="button" onclick="location.href='kriteria.php'" class="btn btn-success">Kembali</button>
 				</form>
   </div>
+ 
                 </main>
                 <?php
 include_once '../include/footer.php';

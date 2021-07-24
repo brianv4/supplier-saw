@@ -36,15 +36,7 @@ $stmt = $pro->readAll();
             </tr>
         </thead>
 
-        <tfoot>
-            <tr>
-                <th>No</th>
-                <th>Nama Kriteria</th>
-                <th>Tipe Kriteria</th>
-                <th>Bobot Kriteria</th>
-                <th colspan="2">Aksi</th>
-            </tr>
-        </tfoot>
+       
 
         <tbody>
 <?php
@@ -70,6 +62,16 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
     </table>
   </div>
+  <div class="card mb-4">
+        <div class="card-header justify-text-center">
+        
+          Menentukan Tipe Kriteria
+           </div>
+			    <ol class="list-unstyled">
+			    	<p class="text-center">Bobot kriteria menentukan seberapa penting kriteria tersebut. Atribut kriteria terdiri dari benefit atau cost, 
+                        dimana benefit artinya semakin besar nilainya semakin bagus, sedangkan cost semakin kecil nilainya semakin bagus.</P>
+</ol>
+			  </div>
                 </main>
                 <?php
 include_once '../include/footer.php';

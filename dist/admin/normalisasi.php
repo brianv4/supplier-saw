@@ -28,15 +28,22 @@ $stmt = $pro->readKhusus();
 	</div>
 <br>
 <div>
+    <!-- 
+    $conn = mysqli_connect('localhost','root','','spk_saw') or die(mysqly_error());
+    $data = mysqli_query($conn,"select * from alternatif ORDER BY spk_saw ASC");
+    ?>-->
+   
 <table class="table table-striped table-bordered" style="width:100%" id="tabeldata">
 <thead>
 		            <tr>
 		                <th rowspan="2" style="vertical-align: middle" class="text-center">Alternatif</th>
 		                <th colspan="<?php echo $stmt2->rowCount(); ?>" class="text-center">Kriteria</th>
 		                <th rowspan="2" style="vertical-align: middle" class="text-center">Hasil</th>
+                  
 		            </tr>
 		            <tr>
 		            <?php
+                    
 					while ($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)){
 					?>
 		                <th><?php echo $row2['nama_kriteria'] ?></th>
@@ -90,8 +97,11 @@ $stmt = $pro->readKhusus();
 							$pro->has = $hasil['bbn'];
 							$pro->hasil();
 							?>
+                            
 						</td>
+                        
 		            </tr>
+                    
 		<?php
 		}
 		?>
@@ -99,6 +109,31 @@ $stmt = $pro->readKhusus();
 
     </table>
   </div>
+
+  <div>
+      <!--
+  <table class="table table-striped table-bordered" style="width:100%" id="tabeldata">
+  <tr>
+		                <th rowspan="2" style="vertical-align: middle" class="text-center">Alternatif</th>
+		                <th rowspan="2" style="vertical-align: middle" class="text-center">Hasil</th>
+                        <th rowspan="2" style="vertical-align: middle" class="text-center">Rangking</th>
+		            </tr>
+<tbody>
+   
+    $rangking =1;
+    while($row = mysqli_fetch_array($data)){
+        echo "<tr>
+        <td>$row[nama_alternatif]</td>
+        <td>$row[hasil_alternatif]</td>
+        <td>$rangking</td>
+        </tr>";
+        $rangking++;
+    }
+    ?>
+
+    </tbody>
+</table>
+-->
                 </main>
                 <?php
 include_once '../include/footer.php';

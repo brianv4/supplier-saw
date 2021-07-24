@@ -25,6 +25,7 @@ class Rangking{
 		$stmt->bindParam(2, $this->ik);
 		$stmt->bindParam(3, $this->nn);
 
+		
 		if($stmt->execute()){
 			return true;
 		}else{

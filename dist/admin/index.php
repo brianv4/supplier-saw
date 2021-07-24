@@ -29,6 +29,7 @@ $nilai = mysqli_query($koneksi, "SELECT hasil_alternatif FROM alternatif");
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
+<<<<<<< Updated upstream
                         <div class="row">
                             <!-- <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
@@ -67,6 +68,9 @@ $nilai = mysqli_query($koneksi, "SELECT hasil_alternatif FROM alternatif");
                                 </div>
                             </div> -->
                         </div>
+=======
+                        
+>>>>>>> Stashed changes
 
 <!--test-->
 <div style="width: 800px;margin: 0px auto;">
@@ -91,7 +95,7 @@ $nilai = mysqli_query($koneksi, "SELECT hasil_alternatif FROM alternatif");
 			    	<?php
 					while ($row3 = $stmt3->fetch(PDO::FETCH_ASSOC)){
 					?>
-				  	<li><?php echo $row3['ket_nilai'] ?> (<?php echo $row3['jum_nilai'] ?>)</li>
+				  	<li><?php echo $row3['ket_nilai'] ?></li>
 				  	<?php
 					}
 				  	?>

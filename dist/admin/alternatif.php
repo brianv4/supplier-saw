@@ -35,14 +35,7 @@ $stmt = $pro->readAll();
             </tr>
         </thead>
 
-        <tfoot>
-            <tr>
-                <th>No</th>
-                <th>Nama Alternatif</th>
-                <th>Hasil Alternatif</th>
-                <th colspan="2">Aksi</th>
-            </tr>
-        </tfoot>
+        
 
         <tbody>
 <?php

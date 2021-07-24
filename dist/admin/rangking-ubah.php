@@ -50,7 +50,7 @@ if($_POST){
 				  <div class="form-group">
           <label for="nn">Nilai</label>
 				    <select class="form-control" id="nn" name="nn">
-				    	<option><?php echo $eks->nn; ?></option>
+				    	<option selected disabled>Ubah Nilai</option>
 				    	<?php
 						$stmt4 = $pgn3->readAll();
 						while ($row4 = $stmt4->fetch(PDO::FETCH_ASSOC)){

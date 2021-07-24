@@ -33,7 +33,7 @@ $stmt = $pro->readKhusus();
 	</div>
 <br>
 <div>
-<table class="table table-striped table-bordered" style="width:100%" id="tabeldata">
+<table class="table table-striped table-bordered table-paginate" cellspacing="0" width="100%">
         <thead>
             <tr>
             <th width="30px">No</th>
@@ -44,15 +44,7 @@ $stmt = $pro->readKhusus();
             </tr>
         </thead>
 
-        <tfoot>
-            <tr>
-            <th width="30px">No</th>
-		                <th>Alternatif</th>
-		                <th>Kriteria</th>
-		                <th>Nilai</th>
-                <th colspan="2">Aksi</th>
-            </tr>
-        </tfoot>
+        
 
         <tbody>
         <?php
@@ -98,6 +90,11 @@ include_once '../include/footer.php';
 	<script src="../js/exporting.js"></script>
 	<script src="../js/jquery-1.11.3.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script>
 
     </body>
 
